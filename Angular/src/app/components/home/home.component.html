@@ -1,0 +1,229 @@
+
+
+    <!-- <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ROSA- Restaurant</title>
+    <meta name="description" content="ROSA is an enchanting Parallax Restaurant WordPress Theme that allows you to tell your story in an enjoyable way, perfect for restaurants or coffee shops.">
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no"> -->
+
+    <!-- Place favicon.ico in the root directory -->
+    <!-- <link rel="shortcut icon" href="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/rosa-favicon.png"> -->
+
+    <!--Fonts-->
+    <!--Fonts-->
+
+    <!--FontAwesome-->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> -->
+    <!--FontAwesome-->
+
+    <!-- <link rel="stylesheet" href="./home.component.css"> -->
+
+
+
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!--Start loader-->
+<!--   <div class="loader-wrap">
+      <div class="loader">
+          <span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span><span class="loader-item"></span>
+      </div>
+  </div> -->
+  <!--End loader-->
+
+  <!--Start Dots-->
+  <div class="dots">
+      <div class="active one" data-x="header"></div>
+      <div class="two" data-x=".recipes"></div>
+      <div class="three" data-x=".fixed-image"></div>
+  </div>
+  <!--End Dots-->
+
+ <!--Start Header-->
+  <header>
+      <nav>
+          <div class="logo">
+              <a href="index.html"><img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/logo-rosa-white.png" alt="Rosa Logo"></a>
+          </div>
+          <div class="toggle">
+              <span class="first"></span>
+              <span class="middle"></span>
+              <span class="last"></span>
+          </div>
+          <div class="navigation-bar">
+              <ul>
+                  <li class="active"><a href="index.html">Home<span class="underline"></span></a></li>
+                  <li><a href="#">Reservations<span class="underline"></span></a></li>
+                  <li><a href="#">Menu<span class="underline"></span></a></li>
+                  <li><a href="#">Blog<span class="underline"></span></a></li>
+                  <li><a href="#">Features<span class="underline"></span></a></li>
+                  <li><a href="#">Shop<span class="underline"></span></a></li>
+                  <li><a href="#">Contact<span class="underline"></span></a></li>
+              </ul>
+          </div>
+      </nav>
+      <div class="text"  [ngStyle]="{'background-image' : 'url('+16+') '}">
+          <h2 >Welcome</h2>
+          <h1>MY LITTLE GARDEN </h1>
+          <div class="arrow">
+              <span class="left"></span>
+              <i class="fas fa-asterisk"></i>
+              <span class="right"></span>
+          </div>
+          <span>Ready To Be Opened</span>
+          <!-- <div class="button"><button>Explore</button></div> -->
+      </div>
+      <svg class="svg-down" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="currentColor" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+      <div class="arrow-down">
+      </div>
+  </header>
+  <!--End Header-->
+
+  <!--start About Us-->
+  <div class="about-us">
+      <div class="text">
+          <h2>Discover</h2>
+          <h3>Our Story</h3>
+          <div><i class="fas fa-asterisk"></i></div>
+          <p>Here you can find everything for your vacation, garden , and even your littel mirpeset.</p>
+          <div><a class="a-CTA" href="#">About Us</a></div>
+      </div>
+      <div class="image-container">
+          <div class="image image1">
+              <img src="1000.jpg" class="ttmmoo">
+          </div>
+          <div class="image image2">
+              <img src="1001.jpg" class="ttmmoo" alt="Food Photo">
+          </div>
+      </div>
+  </div>
+  <!--End About Us-->
+
+  <!--start Recipes-->
+  <div class="recipes">
+      <div class="image"></div>
+      <div class="text">
+          <h2>A Beutifull</h2>
+          <h3>World</h3>
+      </div>
+  </div>
+  <!--End Recipes-->
+
+  <!--start Menu-->
+  <div class="menu">
+      <div class="box-model">
+          <i class="fas fa-times fa-2x close"></i>
+          <div class="arrow">
+              <div class="arrow arrow-right"></div>
+              <div class="arrow arrow-left"></div>
+          </div>
+          <div class="box-image-container">
+              <div class="box-image">
+                  <img src=""  alt="Food Photo">
+              </div>
+          </div>
+      </div>
+       <div class="menu-image-container">
+          <div class="image active">
+            <p> לקולקציית התאורה<app-icon (newclick1)="sapot(3)" icon="fa-solid fa-arrow-circle-down"></app-icon>  </p>
+              <img src="600.webp" (click)="sapot(3)" class="ttmmoo" alt="Food Photo">
+          </div>
+         
+          <div class="image">
+            <p>נדנדות וערסלים<app-icon (newclick1)="sapot(1)" icon="fa-solid fa-arrow-circle-down"></app-icon></p>
+              <img src="506.webp" (click)="sapot(1)" class="ttmmoo" alt="Food Photo">
+          </div>
+         
+          <div class="image">
+            <p>  מערכות ישיבה<app-icon (newclick1)="sapot(4)" icon="fa-solid fa-arrow-circle-down"></app-icon></p>
+              <img src="61.jpg" (click)="sapot(4)" class="ttmmoo" alt="Food Photo">
+          </div>
+          
+          <div class="image">
+            <p>  מנגלים ואמגזיות<app-icon (newclick1)="sapot(2)" icon="fa-solid fa-arrow-circle-down"></app-icon>  </p>
+              <img src="40.webp" (click)="sapot(2)" class="ttmmoo" alt="Food Photo" >
+          </div>
+          <div class="image">
+            <p>  דשא ועציצים<app-icon (newclick1)="sapot(7)" icon="fa-solid fa-arrow-circle-down"></app-icon>  </p>
+            <img src="550.webp" (click)="sapot(7)" class="ttmmoo" alt="Food Photo">
+        </div> 
+        <div class="image">
+            <p>  ציוד לקמפינג<app-icon (newclick1)="sapot(8)" icon="fa-solid fa-arrow-circle-down"></app-icon>  </p>
+            <img src="552.webp" (click)="sapot(8)" class="ttmmoo" alt="Food Photo">
+        </div> 
+     </div>
+      <div class="text">
+          <h2>OUR</h2>
+          <h3>Selected Categories</h3>
+          <div><i class="fas fa-asterisk"></i></div>
+         
+          <p>For those with pure food indulgence in mind, come next door and sate your desires with our ever changing internationally and seasonally inspired small plates.  We love food, lots of different food, just like you.</p>
+          <div><a class="a-CTA" href="#">View The Full Menu</a></div>
+      </div>
+  </div>
+  <!--End Menu-->
+
+  <!--Start fixed-image-->
+  <div class="fixed-image">
+      <div class="text">
+          <h2 style="font-weight: 600;font-size: 20vh;">That's All</h2>
+        
+      </div>
+  </div>
+  <!--End fixed-image-->
+
+  <!--start About Us-->
+  <div class="reservation">
+      <div class="text">
+          <h2>We hope you will enjoy the buy:)</h2>
+          <div><i class="fas fa-asterisk"></i></div>
+          <!-- <p>We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.</p> -->
+          <!-- <div><a class="a-CTA" href="#">Make a Reservation</a></div> -->
+      </div>
+      <div class="image-container">
+          <div class="image image1">
+              <img src="500.webp" alt="Food Photo" class="tomedet">
+          </div>
+          <div class="image image2">
+              <img src="501.webp" alt="Food Photo" class="tomedet">
+          </div>
+      </div>
+  </div>
+  <!--End About Us-->
+
+  <!--Start Footer-->
+  <footer>
+      <div class="text">
+          <h2>Have a fun bought--- </h2>
+          <div><i class="fas fa-asterisk"></i></div>
+          <p>ROSA is an enchanting and easy-to-use parallax Restaurant WordPress theme that allows you to tell your story in a dynamic, narrative and enjoyable way, making it perfect for restaurants, bakeries or coffee shops.</p>
+      </div>
+      <div class="contact-container">
+        <div class="social-media">
+            <h3>Follow Along</h3>
+        </div> 
+           <div class="newsletter">
+            <h3>SEE YOU:)</h3>
+              
+          </div>
+      </div>
+  </footer>
+<!--End Footer-->
+
+<!--Start Copy-Right-->
+  <div class="copyright">
+      <svg class="svg-up" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="#262526" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+      <i class="fas fa-angle-double-up arrow-up"></i>
+      <ul class="info">
+          <li>&copy; ROSA 2017</li>
+          <li>13 Hanway Square, London</li>
+          <li>Tel: 71494563</li>
+          <li>Handcrafted with love by <a href="#">Pixelgrade</a> Team</li>
+      </ul>
+      <ul class="CTA">
+          <li><a href="#">PERMISSIONS AND COPYRIGHT</a></li>
+          <li><a href="#">CONTACT THE TEAM</a></li>
+      </ul>
+  </div>
+  

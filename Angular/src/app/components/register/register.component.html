@@ -1,0 +1,52 @@
+<div class="container mt-3">
+    <p>הרשמה:</p>
+<p>הכנס פרטים:</p>
+
+<form (ngSubmit)="addresiuser()" #myForm="ngForm">
+  <!-- <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="Id" placeholder="Enter Id" name="Id"
+     [(ngModel)]="user.Id" [ngModelOptions]="{standalone: true}"  #cid="ngModel" required>
+    <label for="Id" >Id</label>
+  </div> -->
+  <div class="form-floating mt-3 mb-3">
+    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" 
+    [(ngModel)]="user.Name" pattern="[א-ת ]*" minlength="2" [ngModelOptions]="{standalone: true}"  #cname="ngModel" required>
+    <label for="name">name</label>
+      @if(cname.invalid &&( cname.touched || cname.dirty)){
+        <p [hidden]="!cname.errors!['pattern']"> תוים לא תקינים</p>
+        <p [hidden]="!cname.errors!['minlength']">שם קצר מדי</p>
+        <p [hidden]="!cname.errors!['required']"> שדה זה חובה </p>
+
+      }
+  </div>
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" 
+    [(ngModel)]="user.Email" [ngModelOptions]="{standalone: true}" #cemail="ngModel" required  pattern="[a-zA-Z0-9. _%+-]+@[a-zA-Z0-9. -]+.[a-zA-Z]{2,}">
+    <label for="email"  >Email</label>
+    @if(cemail.invalid &&( cemail.touched || cemail.dirty)){
+        <p [hidden]="!cemail.errors!['pattern']"> תוים לא תקינים</p>
+        <p [hidden]="!cemail.errors!['required']"> שדה זה חובה </p>
+    }
+  </div>
+  <div class="form-floating mb-3 mt-3">
+    <input type="phone" class="form-control" id="phone" placeholder="Enter phone" name="phone" 
+    [(ngModel)]="user.Phone" [ngModelOptions]="{standalone: true}" #cphone="ngModel" pattern="[0-9]*" maxlength="10" minlength="7">
+    <label for="phone">phone</label>
+    @if(cphone.invalid &&( cphone.touched || cphone.dirty)){
+        <p [hidden]="!cphone.errors!['pattern']"> תוים לא תקינים</p>
+        <p [hidden]="!cphone.errors!['minlength']"> קצר מדי</p>
+        <p [hidden]="!cphone.errors!['maxlength']">ארוך מדי </p>
+    }
+  </div>
+  <div class="form-floating mb-3 mt-3">
+    <input type="date" class="form-control" id="birthday" placeholder="Enter birthday" name="birthday" 
+    [(ngModel)]="user.Birthday" [ngModelOptions]="{standalone: true}" #cbirthday="ngModel" required>
+    <label for="phone"  >birthday</label>
+    @if(cbirthday.invalid &&( cbirthday.touched || cbirthday.dirty)){
+        <p [hidden]="!cbirthday.errors!['required']"> שדה זה חובה </p>
+    }
+      </div>
+  <button type="submit" class="custom-btn btn-7" [disabled]="!myForm.valid">Submit</button>
+</form>
+</div>

@@ -1,0 +1,97 @@
+
+  <div class="area"></div>
+  <nav class="main-menu">
+    <form (ngSubmit)="save()">
+    <ul>
+        <p class="title">סינונים</p>
+      <li>
+        <a >
+            
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">
+            קטגוריה
+          </span>
+          <br>
+          <app-category></app-category>
+          <select [(ngModel)]="p.CategoryId" class="sel" [ngModelOptions]="{standalone: true}" >
+            <option  class="sel"></option>
+            @for (i of cats.allCat; track i.Id ) {
+                
+                <option [value]="i.Id" class="sel">{{i.Name}}</option>
+            }
+            
+        </select>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a>
+          <i class=" fa fa-solid fa-dollar-sign fa-2x"></i>
+          <!-- <i class="fa fa-globe fa-2x"></i> -->
+          <span  class="nav-text" id="mr">
+            מחיר 
+          </span>
+          <br>
+          <input [(ngModel)]="p.Price" class="sel" type="number"  name="home" min="0" placeholder="מחיר"  >
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a >
+          <i class="fa fa-comments fa-2x"></i>
+          <span class="nav-text">
+            חברה
+          </span>
+          <br>
+          <app-company></app-company>
+          <select  class="sel" [(ngModel)]="p.CompanyId" [ngModelOptions]="{standalone: true}">
+            <option class="sel"></option>
+            @for (i of coms.allCompany; track i.Id ) {
+                <option [value]="i.Id" class="sel">{{i.Name}}</option>
+            }
+            
+        </select>
+        </a>
+
+      </li>
+      
+    
+    </ul>
+    <button type="submit" class="title" id="bot1" class="btn btn-default" >סנן</button>
+</form>
+<br>
+<p class="title">מיונים</p>
+<button (click)="sortbig()" class="title" id="bot" class="btn btn-default" >ממחיר גבוה לנמוך</button>
+<button (click)="sortsmall()" class="title" id="bot" class="btn btn-default" >ממחיר נמוך חגבוה</button>
+
+
+    <ul class="logout">
+      <li>
+        <a >
+          <i class="fa fa-power-off fa-2x"></i>
+          <span class="nav-text">
+            Logout
+          </span>
+        </a>
+      </li>
+    </ul>
+   
+  </nav>
+
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+    </script>

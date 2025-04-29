@@ -1,0 +1,17 @@
+
+.fa-solid.fa-trash{
+   
+    content: "\f1f8";
+font-family: "Font Awesome 6 Free";
+font-weight: 900;
+width: 123px;
+}
+/* .fa-solid.fa-globe::before{
+content: "\f0ac";
+font-family: "Font Awesome 6 Free";
+font-weight: 900;} */
+::before{
+.fa-solid.fa-globe{
+    content: "\f0ac";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;}}

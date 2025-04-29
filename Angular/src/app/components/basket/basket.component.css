@@ -1,0 +1,31 @@
+.together{
+    width: 40%;
+    height: 3%;
+    display: inline;
+    align-items: center;
+    text-align: center;
+}
+body{
+    align-items: center;
+    text-align: center;
+    
+}
+
+.btn1{
+  display: none; 
+}
+.koteret{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.bb{
+    display: inline;
+}
+.dataofall{
+    font-size: 25px;
+    
+}
+.fa-solid .fa-trash{
+content: "\f1f8";
+font-family: "Font Awesome 6 Free";
+font-weight: 900;}

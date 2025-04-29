@@ -1,0 +1,16 @@
+
+ <main class="page-content">
+        @for(i of ps.allP; track i.Id) {
+        <div class="card" id="bi" [ngStyle]="{'background-image' : 'url('+i.Picture+') '}">
+        <div class="content">
+        <h2 class="title">{{i.Name}}</h2>
+        <p class="copy">{{i.Description}}</p>
+        <p class="copy">{{i.Price}} <i class="fa-solid fa-shekel-sign"></i></p>
+        <button [ngClass]="i.Amount==0?'btn1':'btn'" (click)="moreDetails(i)"  >פרטים נוספים</button>
+        <button id="agala" appAfterBuy  class="btn" (click)="addCart(i)"><i id="agalaicon"class="fa-solid fa-cart-plus"></i></button>
+        
+      </div>
+    </div>
+}
+<app-filters></app-filters>
+  </main>

@@ -1,0 +1,42 @@
+@if(isgood==true){
+<div class="paypal">
+
+    <div class="paypal__header">
+     
+
+      <div class="paypal__header-info">
+        <span class="paypal__date">תאריך קניה:  {{buys.displaybuy.DateOfBuy | date:'dd-MM-yyyy'}}</span>
+        
+      </div>
+    </div>
+
+    <div class="paypal__subheader-wrapper">
+      <div class="paypal__subheader">
+        <h1 class="paypal__username">{{buys.displaybuy.UserName}} Hi</h1>
+        <span class="paypal__help-text pitzi"> קוד הקניה:{{buys.displaybuy.Id}}</span>
+        <br>
+        <span class="paypal__help-text pitzi">כמות המוצרים שהזמנת:{{bas.orechsal}}</span>
+       
+       
+      </div>
+    </div>
+
+    <div class="paypal__cart">
+    
+
+      <ul class="paypal__cart-list">
+      
+        <li class="paypal__cart-item">
+          <span class="paypal__cart-total"> שולם :  </span>
+          <span class="paypal__item-price">{{buys.displaybuy.AmountPay}} <i class="fa-solid fa-shekel-sign"></i></span>
+          
+        </li>
+        <span class="paypal__cart-total">הערה ללקוח:{{buys.displaybuy.Remark}}</span>
+      </ul>
+    </div>
+
+    <div class="paypal__footer">
+        <span class="paypal__help-text">הערה ללקוח:{{buys.displaybuy.Remark}}</span>
+    </div>
+  </div>
+}

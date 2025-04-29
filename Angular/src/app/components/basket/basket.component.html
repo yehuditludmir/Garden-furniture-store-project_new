@@ -1,0 +1,39 @@
+<p class="dataofall">כמות הפריטים שלך:({{bs.orechsal}})</p>
+<div class="container mt-3">
+  <table class="table table-hover">
+    
+    <thead>
+      <tr>
+        <td>תמונה</td>
+        <th>שם מוצר</th>
+        <th>תאור</th>
+        <th>מחיר מוצר</th>
+        <th>כמות</th>
+        <th>סהכ</th>
+        <th>הסרה</th>
+        
+      </tr>
+    </thead><tbody>
+    @for(i of bs.sal;track i.pid){
+      <tr>
+       <img [src]="i.ppic" width="200px" height="180px">
+        <td>{{i.pname}}</td>
+        <td>{{i.pdesc}}</td>
+        <td>{{i.pprice}}x{{i.qty}}</td>
+        <td> 
+          <app-icon  (newclick1)="plus(i)" icon="fa-solid fa-plus-circle"></app-icon><p>{{i.qty}}</p> <app-icon (newclick1)="minus(i)" icon="fa-solid fa-minus-circle"></app-icon>
+           <br>
+          </td>
+          <td>{{i.totalprice}}</td>
+          <td> 
+            <app-button icon="fa-solid fa-trash" (newclick)="removefrombasket(i)"></app-button>
+           
+          </td>
+          
+        
+    }
+    </tbody>
+  </table>
+</div>
+<p class="dataofall">סה"כ לתשלום: {{bs.totalpriceend}}</p>
+<button [ngClass]="bs.sal.length>0?'custom-btn btn-7 together':'btn1'" (click)="Topay()">לתשלום</button>

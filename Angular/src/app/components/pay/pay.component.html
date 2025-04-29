@@ -1,0 +1,68 @@
+
+
+ 
+ 
+<!-- </body> -->
+
+
+
+<div class="container">
+    <form>
+      <div class="row">
+        <h4>Payment Details</h4>
+        <p>  לכבוד {{buys.displaybuy.UserName}}  היקר/ה</p>
+        <p>סה"כ לתשלום - לאחר הנחה:  {{buys.displaybuy.AmountPay}}</p>
+        <div class="input-group">
+          <input id="payment-method-card" type="radio" name="payment-method" value="card" checked="true"/>
+          <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+          <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal"/>
+          <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+        </div>
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="Card Number"/>
+          <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+        </div>
+        <div class="col-half">
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Card CVC"/>
+            <div class="input-icon"><i class="fa fa-user"></i></div>
+          </div>
+        </div>
+        <div class="col-half">
+          <div class="input-group">
+            <select>
+              <option>ינואר</option>
+              <option>פברואר</option>
+              <option>מרץ</option>
+              <option>אפריל</option>
+              <option>מאי</option>
+              <option>יוני</option>
+              <option>יולי</option>
+              <option>אוגוסט</option>
+              <option>ספטמבר</option>
+            </select>
+            <select>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+              <option>2028</option>
+              <option>2029</option>
+              <option>2030</option>
+              <option>2031</option>
+
+              
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Terms and Conditions</h4>
+        <div class="input-group">
+          <input id="terms" type="checkbox"/>
+          <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+        </div>
+      </div>
+
+      <button (click)="movetofinalpay()" class="custom-btn btn-7"><span>להמשך תשלום</span></button>
+    </form>
+  </div>
